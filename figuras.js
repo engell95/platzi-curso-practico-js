@@ -33,6 +33,26 @@ function CaclAreatriangle(base, altura) {
     return (emptyval(Height) && emptyval(Base))? "campo vacio":(parseFloat(Base) * parseFloat(Height)) / 2;
 }
 
+// PI
+const PI = Math.PI;
+
+//calcula diametro de un circulo
+function CaclCirclediameter(radio) {
+    return radio * 2;
+}
+
+//calcula perimetro circulo
+function CaclperimeterCircle() {
+    const Radio = document.getElementById("V-Radio").value;
+    return (emptyval(Radio))? "campo vacio":CaclCirclediameter(Radio) * PI;
+}
+  
+//calcula area de un circulo
+function CaclAreaCircle(radio) {
+    const Radio = document.getElementById("V-Radio").value;
+    return (emptyval(Radio))? "campo vacio":(Radio * Radio) * PI;
+}
+
 //funcion para evaluar tipo de calculo
 function FnCal(type){
     let result = ""
@@ -48,6 +68,12 @@ function FnCal(type){
             break;
         case 4:
             result = Caclperimetertriangle();
+            break;
+        case 5:
+            result = CaclAreaCircle();
+            break;
+        case 6:
+            result = CaclperimeterCircle();
             break;
         default:
             result = "Tipo de calculo no definido"

@@ -8,49 +8,59 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-900">
     <div class="container mx-auto">
-        <div class="grid md:grid-cols-1 lg:grid-cols-3 sm:grid-cols-1">
-        <div class="overflow-hidden mt-10 m-10">
-            <div class="shadow-lg border rounded-lg">
-                <div class="p-5 text-white text-center text-2xl bg-purple-900"><span class="text-orange-500">Calcular</span>Area</div>
-                <div class="p-5 pb-0 text-white text-center text-1xl bg-purple-800 ">
-                    <label class="block text-white text-sm font-bold mb-2" for="V-Square">Escriba cuanto mide cada lado de su cuadrado</label>
-                    <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded" name="V-Square" id="V-Square" min="0.0" placeholder="2" required/>
-                     <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3  mt-5 mb-5 rounded" onclick="FnCal(2);">
-                        Calcular Perimetro
-                    </button>
-                    <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3  mt-5 mb-5 rounded" onclick="FnCal(1);">
-                        Calcular Area
-                    </button>
+        <div id="menu1">
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 sm:grid-cols-1">
+            <div class="overflow-hidden mt-10 m-10">
+                <div class="shadow-lg">
+                    <div class="p-5 text-white text-center text-2xl bg-purple-900"><span class="text-orange-500">Cuadr</span>ado</div>
+                    <div class="p-5 pb-0 text-white text-center text-1xl bg-purple-800 ">
+                        <label class="block text-white text-sm font-bold mb-2" for="V-Square">Escriba cuanto mide cada lado de su cuadrado</label>
+                        <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded" name="V-Square" id="V-Square" min="0.0" placeholder="2" required/>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3  mt-5 mb-5 rounded" onclick="FnCal(2);">
+                            Calcular Perimetro
+                        </button>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3  mt-5 mb-5 rounded" onclick="FnCal(1);">
+                            Calcular Area
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden mt-10 m-10 bg-purple-900">
+                <div class="shadow-lg">
+                    <div class="p-5 text-white text-center text-3xl"><span class="text-orange-500">Triang</span>ulo</div>
+                    <div class="p-5 pb-0 text-white text-center text-1xl bg-purple-800">
+                        <label class="block text-white text-sm font-bold mb-2" for="V-Square1">Escriba cuanto mide cada lado de su triangulo</label>
+                        <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Square1" id="V-Square1" min="0.0" placeholder="Lado 1" required/>
+                        <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Square2" id="V-Square2" min="0.0" placeholder="Lado 2" required/>
+                        <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Base" id="V-Base" min="0.0" placeholder="Base" required/>
+                        <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Height" id="V-Height" min="0.0" placeholder="Altura" required/>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3 mb-5 rounded" onclick="FnCal(4);">
+                            Calcular Perimetro
+                        </button>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3 mb-5 rounded" onclick="FnCal(3);">
+                            Calcular Area
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden mt-10 m-10">
+                <div class="shadow-lg">
+                    <div class="p-5 text-white text-center text-3xl bg-purple-900"><span class="text-orange-500">Circu</span>lo</div>
+                    <div class="p-5 pb-0 text-white text-center text-1xl bg-purple-800">
+                        <label class="block text-white text-sm font-bold mb-2" for="V-Radio">Escriba el radio del circulo</label>
+                        <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Radio" id="V-Radio" min="0.0" placeholder="Altura" required/>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3 mb-5 rounded" onclick="FnCal(6);">
+                            Calcular Perimetro
+                        </button>
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3 mb-5 rounded" onclick="FnCal(5);">
+                            Calcular Area
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="overflow-hidden mt-10 shadow-lg m-10 bg-purple-900 shadow-lg border rounded-lg ">
-            <div class="">
-                <div class="p-5 text-white text-center text-3xl bg-purple-900"><span class="text-orange-500">Calcu</span>lator</div>
-                <div class="p-5 pb-0 text-white text-center text-1xl bg-purple-800">
-                    <label class="block text-white text-sm font-bold mb-2" for="V-Square1">Escriba cuanto mide cada lado de su triangulo</label>
-                    <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Square1" id="V-Square1" min="0.0" placeholder="Lado 1" required/>
-                    <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Square2" id="V-Square2" min="0.0" placeholder="Lado 2" required/>
-                    <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Base" id="V-Base" min="0.0" placeholder="Base" required/>
-                    <input type="number" class="text-black w-full rounded appearance-none border py-1 px-2 rounded mb-3" name="V-Height" id="V-Height" min="0.0" placeholder="Altura" required/>
-                    <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3 mb-5 rounded" onclick="FnCal(4);">
-                        Calcular Perimetro
-                    </button>
-                    <button class="bg-purple-600 hover:bg-purple-700 text-white py-1 px-3 mb-5 rounded" onclick="FnCal(3);">
-                        Calcular Area
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="hidden overflow-hidden mt-10 shadow-lg m-10 bg-purple-900 shadow-lg border rounded-lg ">
-            <div class="">
-                <div class="p-5 text-white text-center text-3xl bg-purple-900"><span class="text-orange-500">Calcu</span>lator</div>
-                <div class="pt-16 p-5 pb-0 text-white text-right text-3xl bg-purple-800">2000 + 100</div>
-            </div>
-        </div>
-    </div>
     </div>
     <script src="./figuras.js"></script>
 </body>
